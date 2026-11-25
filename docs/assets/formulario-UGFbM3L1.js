@@ -1,0 +1,1 @@
+import"./main-DWdZwzXW.js";const e=document.querySelector("#formulario-registro"),o=document.querySelector("#mensaje");e&&e.addEventListener("submit",t=>{t.preventDefault(),o.textContent="Gracias, hemos recibido tu solicitud.",e.reset()});

@@ -1,0 +1,227 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+// Logo
+.logo {
+  font-size: v.$tam-l;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+
+  b {
+    color: v.$color-acento;
+  }
+}
+
+// Menú
+.menu {
+  display: none;
+
+  @include m.respond(sm) {
+    display: block;
+  }
+
+  &__lista {
+    display: flex;
+    align-items: center;
+    gap: v.$espacio-3;
+
+    @include m.respond(lg) {
+      gap: v.$espacio-4;
+    }
+  }
+
+  &__enlace {
+    font-size: v.$tam-s;
+    color: v.$color-texto-suave;
+    transition: color v.$transicion;
+
+    &:hover {
+      color: v.$color-acento;
+    }
+  }
+}
+
+// Botones
+.boton {
+  @include m.boton(v.$color-acento, v.$color-fondo);
+
+  &--borde {
+    background-color: transparent;
+    color: v.$color-texto;
+    border-color: v.$color-borde;
+  }
+
+  &--oscuro {
+    background-color: v.$color-fondo;
+    color: v.$color-texto;
+    border-color: v.$color-fondo;
+  }
+
+  &--pequeno {
+    padding: v.$espacio-1 v.$espacio-2;
+    font-size: v.$tam-xs;
+  }
+
+  &--completo {
+    width: 100%;
+  }
+}
+
+// Etiquetas y enlaces
+.etiqueta {
+  font-size: v.$tam-xs;
+  letter-spacing: 0.16em;
+  color: v.$color-acento;
+  font-weight: 800;
+}
+
+.enlace-texto {
+  font-size: v.$tam-s;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  transition: color v.$transicion;
+
+  &:hover {
+    color: v.$color-acento;
+  }
+}
+
+// Tarjetas de entrenamiento
+.tarjeta {
+  background-color: v.$color-fondo;
+  overflow: hidden;
+
+  &__imagen {
+    height: 280px;
+    filter: brightness(0.7);
+    transition: transform v.$transicion, filter v.$transicion;
+
+    @include m.respond(lg) {
+      height: 330px;
+    }
+  }
+
+  &:hover &__imagen {
+    filter: brightness(0.9);
+    transform: scale(1.03);
+  }
+
+  &__cuerpo {
+    padding: v.$espacio-3;
+  }
+
+  &__numero {
+    color: v.$color-acento;
+    font-size: v.$tam-s;
+    font-weight: 700;
+  }
+
+  &__titulo {
+    font-size: v.$tam-l;
+    margin: v.$espacio-1 0;
+  }
+
+  &__texto {
+    color: v.$color-texto-suave;
+  }
+}
+
+// Planes
+.plan {
+  display: flex;
+  flex-direction: column;
+  padding: v.$espacio-4;
+  border: 1px solid v.$color-borde;
+
+  &--destacado {
+    border-color: v.$color-acento;
+    background-color: v.$color-superficie-clara;
+  }
+
+  &__nombre {
+    font-size: v.$tam-xl;
+    margin-top: v.$espacio-1;
+  }
+
+  &__precio {
+    font-size: v.$tam-titulo;
+    font-weight: 900;
+    margin: v.$espacio-2 0;
+
+    small {
+      font-size: v.$tam-m;
+      color: v.$color-texto-suave;
+    }
+  }
+
+  &__lista {
+    display: flex;
+    flex-direction: column;
+    gap: v.$espacio-1;
+    color: v.$color-texto-suave;
+    margin-bottom: v.$espacio-4;
+  }
+
+  &__boton {
+    margin-top: auto;
+    width: 100%;
+  }
+}
+
+// Formulario
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: v.$espacio-3;
+
+  &__fila {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: v.$espacio-3;
+
+    @include m.respond(md) {
+      grid-template-columns: 1fr 1fr;
+      gap: v.$espacio-2;
+    }
+  }
+
+  &__mensaje {
+    color: v.$color-acento;
+    font-weight: 700;
+    min-height: v.$espacio-3;
+  }
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: v.$espacio-1;
+
+  &__etiqueta {
+    font-size: v.$tam-s;
+    font-weight: 700;
+  }
+
+  &__control {
+    width: 100%;
+    padding: v.$espacio-2;
+    background-color: v.$color-fondo;
+    color: v.$color-texto;
+    border: 1px solid v.$color-borde;
+    border-radius: v.$radio;
+    font: inherit;
+  }
+}
+
+.check {
+  display: flex;
+  align-items: flex-start;
+  gap: v.$espacio-1;
+  font-size: v.$tam-s;
+  color: v.$color-texto-suave;
+  cursor: pointer;
+
+  input {
+    margin-top: 0.3rem;
+  }
+}

@@ -1,0 +1,339 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.contenedor {
+  width: 100%;
+  max-width: v.$ancho-max;
+  margin: 0 auto;
+  padding: 0 v.$espacio-2;
+
+  @include m.respond(md) {
+    padding: 0 v.$espacio-3;
+  }
+}
+
+// Cabecera
+.cabecera {
+  border-bottom: 1px solid v.$color-borde;
+
+  &__interior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+    gap: v.$espacio-2;
+
+    @include m.respond(lg) {
+      min-height: 84px;
+      gap: v.$espacio-4;
+    }
+  }
+}
+
+// Hero (12 columnas desde tablet)
+.hero {
+  padding: v.$espacio-4 0 v.$espacio-5;
+
+  @include m.respond(lg) {
+    padding: v.$espacio-5 0 v.$espacio-6;
+  }
+
+  &__rejilla {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: v.$espacio-4;
+    align-items: center;
+
+    @include m.respond(md) {
+      grid-template-columns: repeat(12, 1fr);
+      gap: v.$espacio-3;
+    }
+  }
+
+  &__contenido {
+    @include m.respond(md) {
+      grid-column: span 7;
+    }
+
+    @include m.respond(lg) {
+      grid-column: span 6;
+    }
+  }
+
+  &__titulo {
+    font-size: v.$tam-hero;
+    margin: v.$espacio-2 0;
+  }
+
+  &__texto {
+    color: v.$color-texto-suave;
+    max-width: 420px;
+    margin-bottom: v.$espacio-3;
+  }
+
+  &__acciones {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: v.$espacio-3;
+  }
+
+  &__datos {
+    display: flex;
+    justify-content: space-between;
+    gap: v.$espacio-2;
+    margin-top: v.$espacio-4;
+
+    @include m.respond(lg) {
+      justify-content: flex-start;
+      gap: v.$espacio-5;
+      margin-top: v.$espacio-5;
+    }
+  }
+}
+
+.hero__dato {
+  display: flex;
+  flex-direction: column;
+
+  strong {
+    font-size: v.$tam-l;
+  }
+
+  strong span {
+    color: v.$color-acento;
+  }
+
+  small {
+    color: v.$color-texto-suave;
+    font-size: v.$tam-xs;
+    letter-spacing: 0.1em;
+  }
+}
+
+.hero__imagen {
+
+  @include m.respond(md) {
+    grid-column: span 5;
+  }
+
+  @include m.respond(lg) {
+    grid-column: span 6;
+  }
+
+  img {
+    height: 420px;
+
+    @include m.respond(md) {
+      height: 520px;
+    }
+
+    @include m.respond(lg) {
+      height: 620px;
+    }
+  }
+}
+
+// Secciones
+.seccion {
+  padding: v.$espacio-5 0;
+
+  @include m.respond(lg) {
+    padding: v.$espacio-6 0;
+  }
+
+  &--oscura {
+    background-color: v.$color-superficie;
+  }
+
+  &__cabecera {
+    display: flex;
+    flex-direction: column;
+    gap: v.$espacio-2;
+    margin-bottom: v.$espacio-4;
+
+    @include m.respond(md) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+
+  &__titulo {
+    font-size: v.$tam-titulo;
+    margin-top: v.$espacio-1;
+  }
+
+  &__subtitulo {
+    color: v.$color-texto-suave;
+  }
+}
+
+// Rejillas de 3 columnas
+.tarjetas,
+.planes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$espacio-3;
+
+  @include m.respond(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// Sección El Club
+.club {
+  &__rejilla {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: v.$espacio-4;
+    align-items: center;
+
+    @include m.respond(md) {
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
+
+  &__imagen {
+    height: 330px;
+
+    @include m.respond(md) {
+      grid-column: span 6;
+      height: 440px;
+    }
+
+    @include m.respond(lg) {
+      height: 480px;
+    }
+  }
+
+  &__contenido {
+    @include m.respond(md) {
+      grid-column: span 6;
+    }
+
+    @include m.respond(lg) {
+      padding: v.$espacio-4;
+    }
+  }
+
+  &__texto {
+    color: v.$color-texto-suave;
+    max-width: 480px;
+    margin: v.$espacio-3 0;
+  }
+}
+
+// Llamada a la acción
+.cta {
+  padding: v.$espacio-5 0;
+  text-align: center;
+  background-color: v.$color-acento;
+  color: v.$color-fondo;
+
+  @include m.respond(lg) {
+    padding: v.$espacio-6 0;
+  }
+
+  &__etiqueta {
+    color: v.$color-fondo;
+  }
+
+  &__titulo {
+    font-size: v.$tam-titulo;
+    margin: v.$espacio-2 0 v.$espacio-4;
+
+    span {
+      color: v.$color-fondo;
+    }
+  }
+}
+
+// Pie de página
+.pie {
+  border-top: 1px solid v.$color-borde;
+  padding: v.$espacio-4 0;
+
+  &__interior {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: v.$espacio-2;
+
+    @include m.respond(md) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__lema,
+  &__legal {
+    color: v.$color-texto-suave;
+    font-size: v.$tam-xs;
+  }
+}
+
+// Página de registro
+.registro {
+  padding: v.$espacio-4 0 v.$espacio-5;
+
+  @include m.respond(lg) {
+    padding: v.$espacio-5 0;
+  }
+
+  &__rejilla {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: v.$espacio-4;
+    align-items: start;
+
+    @include m.respond(lg) {
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
+
+  &__visual {
+    @include m.respond(lg) {
+      grid-column: span 5;
+    }
+  }
+
+  &__titulo {
+    font-size: v.$tam-hero;
+    margin-top: v.$espacio-2;
+  }
+
+  &__imagen {
+    height: 300px;
+    margin: v.$espacio-4 0;
+
+    @include m.respond(lg) {
+      height: 380px;
+    }
+  }
+
+  &__texto {
+    color: v.$color-texto-suave;
+  }
+}
+
+.panel-formulario {
+  padding: v.$espacio-3;
+  background-color: v.$color-superficie;
+
+  @include m.respond(lg) {
+    grid-column: span 7;
+    padding: v.$espacio-4;
+  }
+
+  &__titulo {
+    font-size: v.$tam-titulo;
+    margin: v.$espacio-1 0 v.$espacio-2;
+  }
+
+  &__subtitulo {
+    color: v.$color-texto-suave;
+    margin-bottom: v.$espacio-4;
+  }
+}

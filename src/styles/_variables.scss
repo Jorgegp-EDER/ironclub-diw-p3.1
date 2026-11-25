@@ -1,0 +1,38 @@
+// Colores
+$color-fondo: #101110;
+$color-superficie: #1b1d1b;
+$color-superficie-clara: #252725;
+$color-texto: #f5f5f1;
+$color-texto-suave: #a7aaa5;
+$color-acento: #d5ff39;
+$color-borde: #373a36;
+
+// Tipografía
+$fuente-base: Arial, Helvetica, sans-serif;
+$tam-xs: 0.75rem;
+$tam-s: 0.85rem;
+$tam-m: 1rem;
+$tam-l: 1.5rem;
+$tam-xl: 2rem;
+$tam-titulo: clamp(2.4rem, 5vw, 4.5rem);
+$tam-hero: clamp(3.2rem, 8vw, 6.5rem);
+
+// Espaciados
+$espacio-1: 0.5rem;
+$espacio-2: 1rem;
+$espacio-3: 1.5rem;
+$espacio-4: 2rem;
+$espacio-5: 3rem;
+$espacio-6: 5rem;
+
+// Layout y forma
+$ancho-max: 1180px;
+$radio: 4px;
+$transicion: 0.2s ease;
+
+// Breakpoints (mobile-first)
+$breakpoints: (
+  sm: 600px,
+  md: 768px,
+  lg: 1024px,
+);

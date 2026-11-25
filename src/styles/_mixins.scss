@@ -1,0 +1,39 @@
+@use "sass:map";
+@use "variables" as v;
+
+// Mixin para los botones
+@mixin boton($fondo, $color) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: v.$espacio-1;
+  background-color: $fondo;
+  color: $color;
+  padding: v.$espacio-2 v.$espacio-3;
+  border: 1px solid $fondo;
+  border-radius: v.$radio;
+  font-size: v.$tam-s;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform v.$transicion, filter v.$transicion;
+
+  &:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.92);
+  }
+}
+
+// Mixin de media queries con el mapa $breakpoints
+@mixin respond($punto) {
+  $ancho: map.get(v.$breakpoints, $punto);
+
+  @if $ancho {
+    @media (min-width: $ancho) {
+      @content;
+    }
+  } @else {
+    @error "No existe el breakpoint: #{$punto}";
+  }
+}

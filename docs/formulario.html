@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Solicita información y únete a IRONCLUB." />
+    <title>Únete — IRONCLUB</title>
+    <script type="module" crossorigin src="./assets/formulario-UGFbM3L1.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/main-DWdZwzXW.js">
+    <link rel="stylesheet" crossorigin href="./assets/main-BYo9weiD.css">
+  </head>
+  <body>
+    <header class="cabecera">
+      <div class="contenedor cabecera__interior">
+        <a class="logo" href="index.html" aria-label="IRONCLUB inicio">
+          IRON<span>CLUB</span><b>.</b>
+        </a>
+
+        <nav class="menu" aria-label="Navegación principal">
+          <ul class="menu__lista">
+            <li><a class="menu__enlace" href="index.html#entrenamiento">Entrenamiento</a></li>
+            <li><a class="menu__enlace" href="index.html#club">El club</a></li>
+            <li><a class="menu__enlace" href="index.html#planes">Planes</a></li>
+          </ul>
+        </nav>
+
+        <a class="boton boton--pequeno" href="index.html">VOLVER</a>
+      </div>
+    </header>
+
+    <main class="registro">
+      <div class="contenedor registro__rejilla">
+        <div class="registro__visual">
+          <p class="etiqueta">ENTRA EN EL CLUB</p>
+          <h1 class="registro__titulo">EL CAMBIO<br /><span>EMPIEZA</span><br />CONTIGO.</h1>
+          <img
+            class="registro__imagen"
+            src="./assets/registro-BWBIKiMs.jpg"
+            alt="Atleta entrenando con pesas"
+          />
+          <p class="registro__texto">
+            Da el primer paso. Nosotros te acompañamos en el camino.
+          </p>
+        </div>
+
+        <section class="panel-formulario">
+          <p class="etiqueta">03 / REGISTRO</p>
+          <h2 class="panel-formulario__titulo">CUÉNTANOS<br />SOBRE TI.</h2>
+          <p class="panel-formulario__subtitulo">
+            Completa tus datos y nos pondremos en contacto contigo.
+          </p>
+
+          <form class="formulario" id="formulario-registro">
+            <div class="formulario__fila">
+              <div class="campo">
+                <label class="campo__etiqueta" for="nombre">Nombre</label>
+                <input
+                  class="campo__control"
+                  id="nombre"
+                  name="nombre"
+                  type="text"
+                  placeholder="Tu nombre"
+                  required
+                />
+              </div>
+
+              <div class="campo">
+                <label class="campo__etiqueta" for="apellidos">Apellidos</label>
+                <input
+                  class="campo__control"
+                  id="apellidos"
+                  name="apellidos"
+                  type="text"
+                  placeholder="Tus apellidos"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="campo">
+              <label class="campo__etiqueta" for="email">Email</label>
+              <input
+                class="campo__control"
+                id="email"
+                name="email"
+                type="email"
+                placeholder="nombre@email.com"
+                required
+              />
+            </div>
+
+            <div class="campo">
+              <label class="campo__etiqueta" for="telefono">Teléfono</label>
+              <input
+                class="campo__control"
+                id="telefono"
+                name="telefono"
+                type="tel"
+                placeholder="600 000 000"
+              />
+            </div>
+
+            <div class="campo">
+              <label class="campo__etiqueta" for="plan">¿Qué plan te interesa?</label>
+              <select class="campo__control" id="plan" name="plan" required>
+                <option value="">Selecciona un plan</option>
+                <option value="base">Base — 29€/mes</option>
+                <option value="pro">Pro — 39€/mes</option>
+                <option value="elite">Elite — 49€/mes</option>
+                <option value="asesoramiento">Necesito asesoramiento</option>
+              </select>
+            </div>
+
+            <div class="campo">
+              <label class="campo__etiqueta" for="objetivo">¿Qué objetivo tienes?</label>
+              <textarea
+                class="campo__control"
+                id="objetivo"
+                name="objetivo"
+                rows="4"
+                placeholder="Cuéntanos qué quieres conseguir..."
+              ></textarea>
+            </div>
+
+            <label class="check">
+              <input type="checkbox" required />
+              Acepto que contacten conmigo para informarme sobre el gimnasio.
+            </label>
+
+            <button class="boton boton--completo" type="submit">ENVIAR SOLICITUD ↗</button>
+            <p class="formulario__mensaje" id="mensaje" aria-live="polite"></p>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="pie">
+      <div class="contenedor pie__interior">
+        <a class="logo" href="index.html">IRON<span>CLUB</span><b>.</b></a>
+        <p class="pie__lema">FUERZA · DISCIPLINA · COMUNIDAD</p>
+        <small class="pie__legal">© 2026 IRONCLUB</small>
+      </div>
+    </footer>
+
+  </body>
+</html>

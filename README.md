@@ -1,32 +1,32 @@
-# IRONCLUB — Práctica 3.1 Responsive
-Proyecto de maquetación responsive (landing + formulario) con Vite y Sass.
+# Práctica 3.1: Maquetación Responsive con SASS y Vite — IRONCLUB
 
-## Inicio
-1. Instala Node.js.
-2. En la carpeta del proyecto ejecuta `npm install`.
-3. `npm run dev` para arrancar Vite.
-4. `npm run build` genera el sitio en `docs/`.
+- **Autor:** Jorge Gómez Pantoja
+- **Asignatura:** Diseño de Interfaces Web (DIW)
+- **Práctica:** Práctica 3.1 — Proyecto final responsive Sass
 
-## Estructura
-```text
-IRONCLUB/
-├── index.html
-├── formulario.html
-├── package.json
-├── vite.config.js
-├── README.md
-├── src/
-│   ├── main.js
-│   ├── form.js
-│   ├── assets/             # recursos gráficos
-│   └── styles/
-│       ├── _variables.scss
-│       ├── _mixins.scss
-│       ├── _components.scss
-│       ├── _layout.scss
-│       ├── _globals.scss
-│       └── main.scss
-└── docs/                   # salida de build para GitHub Pages
-```
+## Descripción de la práctica
+Sitio web responsive para el gimnasio IRONCLUB, compuesto por una página principal (`index.html`) y una página de registro con formulario (`formulario.html`). Está maquetado con HTML y SASS organizado en parciales (`_variables.scss`, `_mixins.scss`, `_globals.scss`, `_layout.scss`, `_components.scss` y `main.scss`), aplicando mobile-first, variables, mixins, mapas de breakpoints y anidamiento, y compilado con Vite.
 
-Las dos páginas HTML se mantienen en la raíz del proyecto, como entradas de Vite para el sitio multipágina. El formulario es una demostración de interfaz: no guarda ni envía datos. Las imágenes se cargan desde Unsplash y requieren conexión.
+## Instrucciones de ejecución
+1. Clonar o descomprimir el proyecto y abrir la carpeta en la terminal.
+2. Instalar las dependencias:
+   ```bash
+   npm install
+   ```
+3. Arrancar el servidor de desarrollo local:
+   ```bash
+   npm run dev
+   ```
+4. Compilar la versión de producción (genera la carpeta `docs/`):
+   ```bash
+   npm run build
+   ```
+5. Previsualizar la compilación final:
+   ```bash
+   npm run preview
+   ```
+
+## Enlaces
+- **Repositorio de GitHub:** https://github.com/Jorgegp-EDER/ironclub-diw-p3.1
+- **Página desplegada en GitHub pages:** https://jorgegp-eder.github.io/ironclub-diw-p3.1/
+- **Prototipo en Figma:** https://www.figma.com/design/4OuHosEzOcqpcwtkkiX0q9/IRONCLUB-%E2%80%94-Pr%C3%A1ctica-final-responsive?node-id=0-1&t=8QrxRQ2VNruvSqkK-1
